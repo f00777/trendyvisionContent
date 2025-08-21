@@ -1,8 +1,10 @@
 import jwt from "jsonwebtoken";
 
 export function checkAuth(req, res, next) {
-    console.log("entrando...")
   const token = req.cookies.auth_token; // 👈 viene de la cookie
+  console.log("token: ", token)
+  console.log("Jwt: ", process.env.JWT_SECRET )
+
 
   if (!token) {
     console.log("el wn no estaba autenticado")
