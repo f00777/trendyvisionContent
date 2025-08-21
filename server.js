@@ -43,7 +43,7 @@ if (!fs.existsSync(BASE_UPLOAD_DIR)) {
 }
 
 // Simulando el PUT del ejemplo, incluso actualizando "base de datos"
-app.put('/api/upload', checkAuth, upload.array('images'), async (req, res) => {
+app.put('/api/upload', upload.array('images'), async (req, res) => {
   console.log("se logro entrar en esta wea")
   try {
     const { id } = req.body;
